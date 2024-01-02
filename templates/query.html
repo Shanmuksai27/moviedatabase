@@ -1,0 +1,51 @@
+
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Movie Search</title>
+</head>
+
+
+<body>
+    <div style=" display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-family: 'Roboto', sans-serif;">
+        <h1 style="font-size: x-large;">SEARCH FOR MOVIE</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.query(placeholder='Enter Movie Name', size=32) }}
+            
+            <input type="submit" value="Search">
+        </form>
+    
+        <div style="text-align: center;">
+            {% if movies %}
+                <h2>Search Results</h2>
+                {% for movie in movies %}
+                    <div style="border: 2px solid #ccc; border-radius: 8px; padding: 20px; margin: 20px; text-align: left;">
+                      <center> <span style="font-weight: 1000;"><strong>{{ movie.title }}</strong></span><br></center>
+                        <center> <img src="{{ movie.poster_url }}" alt="{{ movie.title }} Poster" style="height: 200px; width: 200px; border-radius: 8px;"></center>
+                    <center> Release Date: {{ movie.release_date }}<br>
+                        Overview: {{ movie.overview }}<br>
+                    </center>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+    </div>
+    <section>
+        <h1>hello</h1>
+        <p>recomended movies for you <br>
+            latest movies
+        </p>
+    </section>
+
+</body>
+</html>
+

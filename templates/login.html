@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: 5px auto;
+        }
+        form {
+            padding: 80px;
+            border: 5px solid #ccc;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            border: 5px solid #ccc;
+        }
+        button {
+            width: 80%;
+            padding: 8px;
+            background-color:#3d0cbb;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="index.html" method="post">
+           <br><input type="text" name="username" placeholder="Username"></br>
+            <br><input type="password" name="password" placeholder="Password"></br>
+            <br><button type="submit">Login</button></br>
+        </form>
+        <p>Don't have an account? 
+            <ul>
+                <li><a href="signup.html">sign up</a></li>
+            </ul>
+            </p>
+    </div>
+    
+</body>
